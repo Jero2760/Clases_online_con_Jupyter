@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>Why we use Jupyter notebooks &#8212; Clases online con Jupyter</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://publiconsulting.com/docs/02-why-jupyter.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notebooks in teaching and learning" href="03-notebooks-in-teaching-and-learning.html" />
+    <link rel="prev" title="Introduction {#intro}" href="index.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://publiconsulting.com/docs/02-why-jupyter.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Why we use Jupyter notebooks" />
+<meta property="og:description" content="Why we use Jupyter notebooks  Why do we use Jupyter?  As teachers we are responsible for many activities, including creating lessons, lectures, courses, assignm" />
+<meta property="og:image"       content="https://publiconsulting.com/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Clases online con Jupyter</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing-page.html">
+   Teaching and Learning with Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Introduction {#intro}
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Why we use Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-notebooks-in-teaching-and-learning.html">
+   Notebooks in teaching and learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-a-catalogue-of-pedagogical-patterns.html">
+   A catalogue of pedagogical patterns {#catalogue}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05-jupyter-ecosystem.html">
+   Jupyter Notebook ecosystem {#jupyter}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-getting-your-class-going-with-jupyter.html">
+   Getting your class going with Jupyter {#getting-going}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-usage-case-studies.html">
+   Usage case studies {#case-studies}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-about-the-authors.html">
+   About the authors {#authors}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-glossary.html">
+   Glossary {#glossary}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CODE-OF-CONDUCT.html">
+   Contributor Covenant Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CONTRIBUTING.html">
+   Contributing Guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributors.html">
+   Contributor Recognition
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/02-why-jupyter.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Jero2760/Clases_online_con_Jupyter"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Jero2760/Clases_online_con_Jupyter/issues/new?title=Issue%20on%20page%20%2Fdocs/02-why-jupyter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Jero2760/Clases_online_con_Jupyter/edit/master/docs/docs/02-why-jupyter.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-use-jupyter">
+   Why do we use Jupyter?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#but-first-what-is-jupyter-notebook">
+   But first, what is Jupyter Notebook?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-benefits-anecdotes">
+   Course benefits &amp; anecdotes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#engagement">
+     Engagement
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conversations-with-data">
+       Conversations with data
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#participation">
+     Participation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#real-world-experience-bringing-concepts-to-life">
+       Real world experience – bringing concepts to life
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#real-world-experience-ticket-to-leave">
+       Real world experience – Ticket to leave
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#increasing-understanding">
+     Increasing understanding
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#real-world-experience-guiding-learners-at-their-own-pace">
+       Real world experience – Guiding learners at their own pace
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#increasing-student-s-performance">
+     Increasing student’s performance
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#real-world-experience-the-worked-example-effect">
+       Real world experience – The worked-example effect
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#increasing-students-preparation-for-their-career">
+     Increasing students’ preparation for their career
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#real-world-experience-publishing-a-data-narrative-as-a-demonstration-of-industry-ability">
+       Real world experience –  Publishing a data narrative as a demonstration of industry ability
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#student-benefits">
+   Student benefits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#computational-thinking">
+     Computational thinking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#open-source">
+     Open-source
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#active-learning">
+     Active learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructor-benefits">
+   Instructor benefits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusions">
+   Conclusions
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="why-we-use-jupyter-notebooks">
+<h1>Why we use Jupyter notebooks<a class="headerlink" href="#why-we-use-jupyter-notebooks" title="Permalink to this headline">¶</a></h1>
+<section id="why-do-we-use-jupyter">
+<h2>Why do we use Jupyter?<a class="headerlink" href="#why-do-we-use-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>As teachers we are responsible for many activities, including creating lessons,
+lectures, courses, assignments, and supportive environments; encouraging
+engagement and performance in the classroom; helping students learn to think
+critically so they can become lifelong learners and problem solvers; making
+material relevant and meaningful to students’ diverse interests and backgrounds;
+assessing student learning (including grading and evaluation); encouraging
+students to persist with emotional labor (feedback, communication, etc.); and
+trying out teaching and learning practices that improve our ability to do all of
+these things.</p>
+<p>In short, we design learning environments and experiences.</p>
+<p>We use Jupyter notebooks to design learning environments to help support these
+activities. We believe that incorporating Jupyter notebooks in our teaching has
+allowed us to improve students’ understanding of course content, increase
+student engagement with material and their participation in class, and to make
+concepts more meaningful and relevant to students’ diverse interests.  We
+represent a variety of disciplines and have many diverse instructional goals,
+all of which have been supported using Jupyter notebooks. The goal of this
+handbook is to provide you with ideas to help you address your own instructional
+and pedagogical goals.</p>
+<p>Through a series of anecdotes we will illustrate how you, as an educator, can
+use Jupyter notebooks to increase your students’ 1) engagement, 2)
+participation, 3) understanding, 4) performance, and 5) preparation for their
+career.  These are starting places and we are confident that you will also take
+these examples in new and exciting directions.</p>
+</section>
+<section id="but-first-what-is-jupyter-notebook">
+<h2>But first, what is Jupyter Notebook?<a class="headerlink" href="#but-first-what-is-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Project Jupyter is three things: a collection of standards, a
+community, and a set of software tools. Jupyter Notebook, one part of
+Jupyter, is software that creates a Jupyter notebook.
+A Jupyter notebook is a document that supports mixing executable code, equations,
+visualizations, and narrative text. Specifically, Jupyter notebooks allow
+the user to bring together data, code, and prose, to tell an
+interactive, computational story. Whether analyzing a corpus of American
+Literature, creating music and art, or illustrating the engineering concepts
+behind Digital Signal Processing, the notebooks can combine explanations
+traditionally found in textbooks with <em>the interactivity of an application</em>.</p>
+<p><img alt="A Jupyter notebook, starting with a markdown cell containing a title and an explanation (including an equation rendered with LaTeX). Three code cells produce the final inline plot." src="../_images/Fig_notebook.png" /></p>
+<p>Jupyter is a free, open source platform that is an excellent learning
+environment for students. For teachers, it increases our efficiency and
+decreases cognitive load so we can engage students. Notebooks can be useful for
+achieving your goals as a teacher in numerous environments from STEM labs or
+humanities narratives, to podium lectures or flipped classrooms. We use Jupyter
+notebooks in small classes and for classes that have hundreds of students.
+Jupyter notebooks can be used for teaching part of one lecture or can be used to
+teach a whole course.  Jupyter notebooks enable us and our students to have a
+conversation with a problem and link to resources, like audio, video, images,
+visualizations–and even allow students to mix and remix these. And yet students
+need to install nothing beyond a modern web browser to use this free software.</p>
+<p>Jupyter notebooks can be used to organize classroom materials and objects, store
+and provide access to reading materials for students, present and share lecture
+materials, perform live coding, explore and interact with materials, support
+self-paced learning, grade students’ homework, solve homework problems, or make
+materials reusable to others (see Chapters 3 and 4).</p>
+<p>Read on to find out how we have used Jupyter notebooks for teaching and learning
+to benefit both our students and ourselves. Jupyter notebooks support a wide
+range of learning goals, including learning to program, learning domain
+knowledge, and practicing communication skills like storytelling. The authors of
+this book have used Jupyter notebooks to teach:</p>
+<ul class="simple">
+<li><p>Sciences</p>
+<ul>
+<li><p>Physics and astronomy</p></li>
+<li><p>Geoscience</p></li>
+<li><p>Biology</p></li>
+<li><p>Cognitive Science</p></li>
+<li><p>Computer science</p></li>
+<li><p>Data science</p></li>
+<li><p>Statistics</p></li>
+<li><p>Social sciences</p></li>
+</ul>
+</li>
+<li><p>Writing</p>
+<ul>
+<li><p>Writing Seminar</p></li>
+<li><p>Writing and technical communication</p></li>
+</ul>
+</li>
+<li><p>Digital Humanities</p>
+<ul>
+<li><p>Music</p></li>
+<li><p>Text analysis</p></li>
+<li><p>Metadata processing</p></li>
+</ul>
+</li>
+<li><p>Engineering</p>
+<ul>
+<li><p>Chemical engineering (kinetics and reactor design)</p></li>
+<li><p>Mechanical engineering</p></li>
+<li><p>Aerospace engineering</p></li>
+</ul>
+</li>
+<li><p>Introduction to Programming</p>
+<ul>
+<li><p>High school</p></li>
+<li><p>College and university-level courses (true introductions through advanced courses)</p></li>
+</ul>
+</li>
+</ul>
+<p>Our other use of notebooks for education include:</p>
+<ul class="simple">
+<li><p>Building models/simulations (with and without programming)</p></li>
+<li><p>Using widgets to demonstrate and interact with simulations</p></li>
+<li><p>Visualizations of process and data</p></li>
+</ul>
+</section>
+<section id="course-benefits-anecdotes">
+<h2>Course benefits &amp; anecdotes<a class="headerlink" href="#course-benefits-anecdotes" title="Permalink to this headline">¶</a></h2>
+<section id="engagement">
+<h3>Engagement<a class="headerlink" href="#engagement" title="Permalink to this headline">¶</a></h3>
+<p>As teachers we routinely struggle to engage our students, especially when we are
+constrained by the format of the course (e.g., online, 50-minute lecture),
+available technologies, students distractions, and/or other factors.
+Nevertheless, it is substantially our responsibility to create environments and
+experiences within these limits that engage students in our courses.  This is
+where notebooks can give you another tool to break out of the mundane, and get
+students engaged in their learning.</p>
+<section id="conversations-with-data">
+<h4>Conversations with data<a class="headerlink" href="#conversations-with-data" title="Permalink to this headline">¶</a></h4>
+<p>The creators of Jupyter describe it as a set of open-source tools for
+interactive and exploratory computing, and a platform for creating computational
+narratives. Jupyter allows us, as educators, to narrate a “conversation between
+the student and data”. Consider this example, using the data of life expectancy
+of many countries over the years:</p>
+<blockquote>
+<div><p>I use a short bit of code to make a graph showing the time evolution, in what
+is called a “spaghetti plot” (see figure). Looking at this messy graphic, I
+point out how most of the lines show growth over time: life expectancy is
+improving all over the world. But a couple of lines show a marked dip in a
+given year. I can ask students: which country had that dip? What happened
+there? Why? With a bit more coding, we identify that Cambodia had a shocking
+life expectancy of about 30 years in 1977, and Rwanda had even worse life
+expectancy in 1992. We then have the opportunity to discuss why these
+countries experienced a mortality crisis. The data brings to life a meaningful
+discussion, with many possible paths involving history, politics, economics,
+and health. – Lorena Barba</p>
+</div></blockquote>
+<p><img alt="From: http://go.gwu.edu/engcomp2lesson4" src="../_images/engcomp2lesson4-life-expectancy.png" /></p>
+<p>Jupyter notebooks are essential tools of connection—tools that engage
+learners in transitions in their thinking. The opportunity of intermingling
+computation into a narrative, creating a conversation with data is a powerful
+and effective form of communication. With Jupyter, you now have a new form of
+content to create and share with learners: <em>computable content</em>. In a world
+where every subject matter can have a data-supported treatment, where
+computational devices are omnipresent and pervasive, the union of natural
+language and computation creates compelling communication and learning
+opportunities.</p>
+</section>
+</section>
+<section id="participation">
+<h3>Participation<a class="headerlink" href="#participation" title="Permalink to this headline">¶</a></h3>
+<p>Engaging students in your courses requires their participation and interaction
+with you, their peers, and/or the content [&#64;moore1989three]. How, when, and
+why you use student participation in yours will, of course, depend on your
+goals, the specific objectives for teaching the content within your course, your
+students, and other factors.  Using notebooks, however, encourages participation
+and gives you more tools for promoting participation. Notebooks can connect
+students to authentic external audiences as well. Students can, for example,
+consume notebooks from other classes, and publish notebooks where others can
+read them.</p>
+<section id="real-world-experience-bringing-concepts-to-life">
+<h4>Real world experience – bringing concepts to life<a class="headerlink" href="#real-world-experience-bringing-concepts-to-life" title="Permalink to this headline">¶</a></h4>
+<p>Notebooks are living documents, meaning they can be edited to respond to
+questions or input from students and used a conversation piece during a lecture
+or presentation.</p>
+<blockquote>
+<div><p>Our group uses Jupyter notebooks as “apps” to demonstrate concepts in
+geophysics. These notebook-apps connect numerical simulations to widgets and
+relevant plots. In the classroom, we ask students to help define input
+parameters based on an application or case study that they are interested
+in. Prior to displaying the results, we ask students to build a mental image
+of their expectations. If the resultant image matches their expectations, then
+we have reinforced a concept, and if not, it is an opportunity to learn. We as
+instructors can interactively engage with students’ questions by updating the
+inputs to the simulation in order to explore concepts with them. Students have
+access to the same notebooks through free web-platforms like Binder, so simply
+by following a link, they can take the steering wheel and engage with the
+concepts on their own. Notebooks bring the concepts to life and serve as a
+conversation piece for the interaction between learners and educators. –
+Lindsey Heagy</p>
+</div></blockquote>
+<p><img alt="Dr. Douglas Oldenburg (left) engaging with a student during a short course on geophysical electromagnetics (https://geosci.xyz). Photo credit: Seogi Kang" src="../_images/oldenburg-geosci.jpg" /></p>
+</section>
+<section id="real-world-experience-ticket-to-leave">
+<h4>Real world experience – Ticket to leave<a class="headerlink" href="#real-world-experience-ticket-to-leave" title="Permalink to this headline">¶</a></h4>
+<p>Another example of generating participation in the classroom with Jupyter
+notebooks is the Activity magic, available as an extension. It creates what has
+been called a “ticket to leave” (or “exit ticket”) via the notebook. The idea of
+a “ticket to leave” is an excellent way to end a class or lab. Briefly, it is
+just a survey that you give the students (see figure). Often, these surveys are
+given via a Personal Response System (also known as “clickers” or PRS) or cell
+phones. There are a few uses of such surveys:</p>
+<ol class="simple">
+<li><p>Give the instructor some feedback on the students’ understanding, as a whole</p></li>
+<li><p>Provide time and opportunity for students to review and synthesize today’s
+materials</p></li>
+<li><p>Allow the students to apply their recent knowledge to a novel problem</p></li>
+<li><p>An additional instance to learn the materials</p></li>
+</ol>
+<p><img alt="Example of the Activity magic seen from the students view. A question, with multiple choice answers is shown, with buttons for their input." src="../_images/activity-magic-student.png" /></p>
+<p>These questions do not typically require much time to answer, but are meant to
+capture the essence of the conversation of the class.  After a minute or so to
+contemplate the question, the students select their answer (by clicking one of
+the buttons), and instructor shows the gestalt results (see figure).</p>
+<p><img alt="The Activity magic, from the the instructor's perspective. The barchart is shown on the projector once all of the students have had a chance to respond." src="../_images/activity-magic-instructor.png" /></p>
+<p>Good “exit ticket” questions can be domain specific questions, but can also be
+metacognitive questions (about one’s learning style, for example), or high-level
+organizational questions (e.g., “what was the goal of today’s discussion?”). We
+recommend leaving enough time at the end of class (perhaps 10 minutes) to have a
+full and complete wrap-up discussion. After the discussion, you may wish to
+adjust the following class meeting if you feel that not enough students had the
+insight you were aiming for. For more information on “tickets to leave” see
+<a class="reference external" href="https://www.brown.edu/sheridan/teaching-learning-resources/teaching-resources/course-design/classroom-assessment/entrance-and-exit/sample">https://www.brown.edu/sheridan/teaching-learning-resources/teaching-resources/course-design/classroom-assessment/entrance-and-exit/sample</a>.
+For more on the Jupyter Notebook extension, see
+<a class="reference external" href="https://github.com/Calysto/metakernel/blob/master/metakernel/magics/README.md#activity">using</a>
+and <a class="reference external" href="https://github.com/Calysto/metakernel#use-metakernel-magics-in-ipython">installing</a>
+Calysto Activity magic.</p>
+</section>
+</section>
+<section id="increasing-understanding">
+<h3>Increasing understanding<a class="headerlink" href="#increasing-understanding" title="Permalink to this headline">¶</a></h3>
+<p>Within any course you will typically try to achieve a diverse set of objectives.
+Benjamin Bloom (https://en.wikipedia.org/wiki/Bloom%27s_taxonomy) provided a
+framework for the detailed objectives we want to achieve, ranging from basic
+knowledge (such as, terminology, specific facts, trends and sequences,
+classifications and categories, etc.) all the way to ability to evaluate and
+create (such as, abstract relationships, judgments but based criteria, original
+works).  Achieving the former (i.e., basic knowledge and comprehension) is far
+easier to achieve than understanding (i.e., evaluation and creation); yet, most
+often we, as educators, are striving for increasing the complex understanding of
+our students on the topics we are teaching.  The good news is that notebooks
+offer a valuable tool for teaching toward understanding – moving students, for
+example, from passively viewing course content to exploring, analyzing,
+synthesizing, and evaluating the content in active ways.</p>
+<section id="real-world-experience-guiding-learners-at-their-own-pace">
+<h4>Real world experience – Guiding learners at their own pace<a class="headerlink" href="#real-world-experience-guiding-learners-at-their-own-pace" title="Permalink to this headline">¶</a></h4>
+<p>The fundamental theory behind Computational Fluid Dynamics (CFD) used in
+Aerospace Engineering is based on understanding the Navier-Stokes equations.
+“CFD Python” is a collection of Jupyter notebooks based on a practical module
+that Lorena Barba began using in class in her Computational Fluid Dynamics (CFD) course at
+Boston University in 2009. The 5-week module develops worked examples that build
+on each other to incrementally guide the learner to create a program to solve
+the Navier–Stokes equations of fluid dynamics, in 12 steps.</p>
+<blockquote>
+<div><p>In 2013, I was invited to teach a 2 day mini-course in the Latin-American
+School in High-Performance Computing, in Argentina. The Jupyter notebooks
+platform allowed me to create a guided narrative to support learners with
+different background experience and knowledge. For that event, we wrote
+notebooks based on the CFD course module, to use as instructional scaffolding
+in the minicourse. Twenty students worked through the notebooks as self-paced
+lessons, while I went from desk to desk asking and answering questions. About
+four of the students completed all 12 steps in the 2 days, a bulk of them
+achieved up to about Step 8, and a few of them lagged behind in Steps 4 or 5
+by the end of the course. For those who completed the full module, they had
+achieved in 2 days what my regular students in the classroom normally took 5
+weeks to do. Seeing that was an eye-opening moment: both the power of worked
+examples in code, and the ability to allow learners to follow their own pace
+made a remarkable difference in these learners. – Lorena Barba</p>
+</div></blockquote>
+<p>Based on the experience developing the “CFD Python” learning module [&#64;barbacfd],
+this basic design pattern was adopted for creating lessons using computable
+content:</p>
+<ol class="simple">
+<li><p>Break it down into small steps</p></li>
+<li><p>Chunk small steps into bigger steps</p></li>
+<li><p>Add narrative and connect</p></li>
+<li><p>Link out to documentation</p></li>
+<li><p>Interleave easy exercises</p></li>
+<li><p>Spice with challenge questions/tasks</p></li>
+<li><p>Publish openly online</p></li>
+</ol>
+<p>This was particularly helpful for student understanding.</p>
+</section>
+</section>
+<section id="increasing-student-s-performance">
+<h3>Increasing student’s performance<a class="headerlink" href="#increasing-student-s-performance" title="Permalink to this headline">¶</a></h3>
+<p>The goal of learning is often actualized through the performance of students.
+This is routinely most visible by what we attempt to assess during and at the
+end of instruction. Using notebooks we can create a variety of a performance
+opportunities for students, thereby giving them more opportunities for practice
+and feedback, as well as more opportunities for us, as instructors, to
+assess their ability to perform.</p>
+<section id="real-world-experience-the-worked-example-effect">
+<h4>Real world experience – The worked-example effect<a class="headerlink" href="#real-world-experience-the-worked-example-effect" title="Permalink to this headline">¶</a></h4>
+<p>The worked-example effect is the best known and most widely studied of the
+cognitive load effects [&#64;sweller2006worked]. It refers to providing full
+guidance on how to solve a problem, resulting in better student performance than
+problem-solving conditions with no guidance. For complex tasks, inexperienced or
+beginner learners benefit the most from the worked-examples procedure. One study
+[&#64;chen2015worked] concludes that: “worked example effect occurs for complex,
+high-element interactivity materials that impose a heavy working memory load”
+and “when dealing with complex material that learners may have difficulty
+understanding, high levels of guidance are likely to result in enhanced
+performance over lower levels of guidance.” This research-based guidance seems
+especially relevant for teaching novice programmers to use computation in the
+context of their subject matter (science, engineering, or other).</p>
+</section>
+</section>
+<section id="increasing-students-preparation-for-their-career">
+<h3>Increasing students’ preparation for their career<a class="headerlink" href="#increasing-students-preparation-for-their-career" title="Permalink to this headline">¶</a></h3>
+<p>In preparing students to apply what they have learned, striving to align what
+happens in the course with what they will experience in their career is
+important. From using parallel software to mirroring workflows,  we want our
+students to experience and be prepared for the workplace. Recognizing, of
+course, that workplaces are not static and the skills required for a career are
+always emerging, using notebooks provides a flexible platform to build skills
+and build portfolios of what students can do.</p>
+<section id="real-world-experience-publishing-a-data-narrative-as-a-demonstration-of-industry-ability">
+<h4>Real world experience –  Publishing a data narrative as a demonstration of industry ability<a class="headerlink" href="#real-world-experience-publishing-a-data-narrative-as-a-demonstration-of-industry-ability" title="Permalink to this headline">¶</a></h4>
+<p>For Data Science careers, a publicly shared narrative about a data analytics
+project goes a long way at demonstrating the student’s potential at an
+interview. Elizabeth Wicks has her students develop a Jupyter notebook that
+tells the story of a data munging and analysis project done in the class. The
+students then publish this notebook to their Github profile pages. Being that
+Jupyter is one of the most popular ways in industry to communicate data science
+results, the students have a very valuable key to a potential career.</p>
+<p>TODO: Add quote from Elizabeth</p>
+</section>
+</section>
+</section>
+<section id="student-benefits">
+<h2>Student benefits<a class="headerlink" href="#student-benefits" title="Permalink to this headline">¶</a></h2>
+<p>Creating opportunities for students to develop as learners stretch beyond the
+boundaries of any specific course where you may use notebooks.  By enriching
+their learning experience in your course, you will help them develop valuable
+skill-sets and mind-sets that they will take with them into other courses and
+into their career.</p>
+<section id="computational-thinking">
+<h3>Computational thinking<a class="headerlink" href="#computational-thinking" title="Permalink to this headline">¶</a></h3>
+<p>Jupyter notebooks support a wide range of learning goals. Its interactivity
+enables building intuitive understanding of domain knowledge, such as the
+understanding of a mechanical response of a system while varying parameters or
+understanding how an algorithm behaves. Notebooks can also help teach effective
+communication skills, combining prose with graphics into a strong narrative.
+Finally, notebooks can support teaching or strengthening programming skills, by
+combining code with text descriptions and visualizations. Even if a notebook is
+designed to be consumed passively, the exposure to code helps show students how
+to do something—and that they can do it themselves. This also helps demystify
+coding for students who do not view themselves as traditional “computer science”
+types.</p>
+<p>Using notebooks, you can create rich learning experiences that link together the
+core foundations of computational thinking:</p>
+<ul class="simple">
+<li><p><em>Decomposition</em>: Breaking down data, processes, or problems into smaller, manageable parts</p></li>
+<li><p><em>Pattern Recognition</em>: Observing patterns, trends, and regularities in data</p></li>
+<li><p><em>Abstraction</em>: Identifying the general principles that generate these patterns</p></li>
+<li><p><em>Algorithm Design</em>: Developing the step by step instructions for solving
+this and similar problems</p></li>
+</ul>
+</section>
+<section id="open-source">
+<h3>Open-source<a class="headerlink" href="#open-source" title="Permalink to this headline">¶</a></h3>
+<p>Integrating notebooks into classes also exposes students to a large and growing
+ecosystem of open-source tools. This supports their education, but also provides
+experience in the same environment of tools used in industries in high demand
+for trained employees, such as data science and machine learning. The
+open-source nature of these tools also ensures that course content remains
+accessible and affordable to all students—including those outside the
+traditional university environment.</p>
+<p>Unlike proprietary notebook technologies such as Mathematica, or specific
+programming languages/environments such as Matlab or C++, the barriers to entry
+for students learning with Jupyter notebooks can be extremely low. At a minimum,
+during a lecture, students can simply watch/read an interactive demo using a
+notebook, to replace slides or lecture notes. On their own, using a cloud
+service such as Binder or JupyterHub, students can open any modern web browser
+to some address and interact with a notebook (an example of this technology can
+be found at <a class="reference external" href="https://jupyter.org/try">https://jupyter.org/try</a>), without
+needing any installation or configuration. In the most complicated case,
+students can install Anaconda and follow simple instructions to install the
+Jupyter Notebook, which works and looks the same on all platforms—and is free
+and open source.</p>
+</section>
+<section id="active-learning">
+<h3>Active learning<a class="headerlink" href="#active-learning" title="Permalink to this headline">¶</a></h3>
+<p>Thanks to their interactivity, notebooks enable a spectrum of active learning
+methods, which have been shown to increase performance in science, engineering,
+and mathematics [&#64;freeman2014active]. To start, students can consume notebook
+content by reading and running notebooks, then move to editing or completing
+notebooks as assignments. This allows students to focus on the content and
+concepts, rather than just note-taking.</p>
+<p>At the top of Bloom’s Taxonomy is pure creation, where students can, for
+example, author complete computational essays. In both cases, notebooks support
+courses where students have a wide range of experience and ability: students who
+need help can rely on the scaffolding of prose explanations and existing code,
+while also providing room to stretch and explore for more-experienced students.
+The additional annotation and prose that accompanies code also helps support
+non-traditional learners and students from underrepresented groups who may have
+less initial experience/comfort with programming.</p>
+<p>Instilling the habits of active learning, through the use of notebooks, will
+also provide benefits beyond the boundaries of your course. Interactivity drives
+engagement, interest, and exploration of concepts. Engaged students in your
+course are more likely to be engaged learners in other courses and beyond.</p>
+</section>
+</section>
+<section id="instructor-benefits">
+<h2>Instructor benefits<a class="headerlink" href="#instructor-benefits" title="Permalink to this headline">¶</a></h2>
+<p>Notebooks can be adopted at a variety of levels and formats, offering
+flexibility based on the needs of a course and comfort/interest level of the
+instructor: in-class demos, interactive labs, auxiliary material (e.g., book
+replacements, lecture note supplements), assignments, or full course content in
+a flipped learning environment. Notebooks offer a route to active learning
+methods for instructors without experience of them, but do not force a
+particular teaching style.</p>
+<p>At a minimum, notebooks can be used to make publishable and interactive lecture
+notes that blend narrative text, images, videos with image and results to
+present the concepts. Furthermore, these course materials can be developed
+gradually, starting with a low-effort draft to a more-polished, publishable
+document that can be easily extended over time—and adopted by others. The growth
+of open-source communities around software tools and educational resources
+creates more opportunities for the re-use and adaptation of existing resources.</p>
+<p>While many notebook authors do use Python, the Jupyter Notebook supports many
+languages, so students (and instructors) are not tied to one specific language.
+Indeed, the name Jupyter comes from three languages: Julia, Python, and R.
+Furthermore, these (free) tools have minimal barriers to entry—using a cloud
+infrastructure means students and instructors do not have to install anything,
+while in the “worst” case installations require a few command-line excursions,
+but these are free, openly available, and cross-platform.</p>
+</section>
+<section id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>We hope that this chapter has illustrated that teaching with Jupyter notebooks
+can be valuable for you and your student. We have shown notebooks to be a tool that
+can increase student engagement, participation, understanding, performance, and
+preparation for their careers.  These are substantial accomplishments that can be
+achieved in a variety of disciplines and content areas. Using several real world
+examples, we attempted to illustrate the numerous ways teachers are using
+notebooks. Hopefully these, when combined with the chapters that follow, will
+guide you in 1) supporting your students’ learning, 2) giving you confidence
+that you can use notebooks, 3) help you understand the necessary logistics, and
+4) help give you clear expectations of what can be accomplished with Jupyter
+notebooks.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "Jero2760/Clases_online_con_Jupyter",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Introduction {#intro}</a>
+    <a class='right-next' id="next-link" href="03-notebooks-in-teaching-and-learning.html" title="next page">Notebooks in teaching and learning</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Publiconsulting Media<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-52617120-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
