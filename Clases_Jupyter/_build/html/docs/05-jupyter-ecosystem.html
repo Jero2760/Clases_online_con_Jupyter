@@ -1,0 +1,1027 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>Jupyter Notebook ecosystem {#jupyter} &#8212; Clases online con Jupyter</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://publiconsulting.com/docs/05-jupyter-ecosystem.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Getting your class going with Jupyter {#getting-going}" href="06-getting-your-class-going-with-jupyter.html" />
+    <link rel="prev" title="A catalogue of pedagogical patterns {#catalogue}" href="04-a-catalogue-of-pedagogical-patterns.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://publiconsulting.com/docs/05-jupyter-ecosystem.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Jupyter Notebook ecosystem {#jupyter}" />
+<meta property="og:description" content="Jupyter Notebook ecosystem {#jupyter}  Language support: kernels  The Jupyter system supports over 100 programming languages (called “kernels” in the Jupyter ec" />
+<meta property="og:image"       content="https://publiconsulting.com/_static/logo.png" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Clases online con Jupyter</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="landing-page.html">
+   Teaching and Learning with Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="index.html">
+   Introduction {#intro}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-why-jupyter.html">
+   Why we use Jupyter notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-notebooks-in-teaching-and-learning.html">
+   Notebooks in teaching and learning
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04-a-catalogue-of-pedagogical-patterns.html">
+   A catalogue of pedagogical patterns {#catalogue}
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Jupyter Notebook ecosystem {#jupyter}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-getting-your-class-going-with-jupyter.html">
+   Getting your class going with Jupyter {#getting-going}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07-usage-case-studies.html">
+   Usage case studies {#case-studies}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-about-the-authors.html">
+   About the authors {#authors}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09-glossary.html">
+   Glossary {#glossary}
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CODE-OF-CONDUCT.html">
+   Contributor Covenant Code of Conduct
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="CONTRIBUTING.html">
+   Contributing Guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributors.html">
+   Contributor Recognition
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/05-jupyter-ecosystem.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Jero2760/Clases_online_con_Jupyter"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/Jero2760/Clases_online_con_Jupyter/issues/new?title=Issue%20on%20page%20%2Fdocs/05-jupyter-ecosystem.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Jero2760/Clases_online_con_Jupyter/edit/master/docs/docs/05-jupyter-ecosystem.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#language-support-kernels">
+   Language support: kernels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-jupyter-notebooks">
+   Using Jupyter notebooks
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authoring-jupyter-notebooks">
+   Authoring Jupyter notebooks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#accessing-documentation-in-the-notebook-accessing-documentation-in-the-notebook">
+     Accessing documentation in the notebook  {#accessing-documentation-in-the-notebook}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#widgets-widgets">
+     Widgets {#widgets}
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example">
+       Example {-}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#magics-magics">
+     Magics {#magics}
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#examples">
+       Examples {-}
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notebooks-under-version-control-notebooks-under-version-control">
+     Notebooks under version control {#notebooks-under-version-control}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-notebooks-testing-notebooks">
+     Testing notebooks {#testing-notebooks}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#essential-python-libraries-essential-python-libraries">
+     Essential Python libraries  {#essential-python-libraries}
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#advanced-topic-extensions-advanced-topic-extensions">
+     Advanced topic: extensions {#advanced-topic-extensions}
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-and-tricks">
+   Tips and tricks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reminders">
+     Reminders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#feedback">
+     Feedback
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explaining-each-cell">
+     Explaining each cell
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-structure-code-cells">
+     How to structure code cells
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#custom-styling">
+     Custom styling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#length-of-notebooks">
+     Length of notebooks
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gotchas">
+   Gotchas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#programming-language-neq-jupyter">
+     Programming language
+     <span class="math notranslate nohighlight">
+      \(\neq\)
+     </span>
+     Jupyter
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#restart-restart-restart">
+     Restart, restart, restart…
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notebook-hygiene-notebook-hygiene">
+     Notebook hygiene {#notebook-hygiene}
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="jupyter-notebook-ecosystem-jupyter">
+<h1>Jupyter Notebook ecosystem {#jupyter}<a class="headerlink" href="#jupyter-notebook-ecosystem-jupyter" title="Permalink to this headline">¶</a></h1>
+<section id="language-support-kernels">
+<h2>Language support: kernels<a class="headerlink" href="#language-support-kernels" title="Permalink to this headline">¶</a></h2>
+<p>The Jupyter system supports over 100 programming languages (called
+“kernels” in the Jupyter ecosystem) including Python, Java, R, Julia,
+Matlab, Octave, Scheme, Processing, Scala, and many more.  Out of the
+box, Jupyter will only run the IPython kernel, but additional kernels
+may be installed. Language support continues to be added
+by the open source community and the best source for an up-to-date list is the wiki page maintained by the project:
+<a class="reference external" href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">https://github.com/jupyter/jupyter/wiki/Jupyter-kernels</a>.
+These projects
+are developed and maintained by the open source community and exist in
+various levels of support. Some kernels may be supported
+by a vast number of active (and even paid) developers, while others
+may be a single person’s pet project. When trying out a new kernel, we
+suggest exploring a kernel’s community of users and documentation to
+see if it has an appropriate level of support for your (and your
+students’) use.</p>
+<p>Jupyter’s kernel flexibility allows instructors to pick the right
+language for a particular context.  For example instructors may use
+Python to teach programming, while switching to R to teach statistics,
+and then perhaps Scala to teach big-data processing. Regardless of the
+language chosen, the Jupyter interface remains the same. Thus, some
+cognitive load can be lessened when using multiple languages within or
+across courses (e.g., the user interface stays the same between
+the student’s Digital Humanities and Biology courses).
+Students often appreciate consistent use of the same language within a course, however.</p>
+</section>
+<section id="using-jupyter-notebooks">
+<h2>Using Jupyter notebooks<a class="headerlink" href="#using-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>When using Jupyter notebooks on the data projector or large screen
+monitor in the classroom, we recommend giving the students specific
+instructions on the meaning of the user interface of the notebook. It
+is not exactly intuitive.</p>
+<p>The first and most salient component of the notebook is the
+<em>cell</em>. Indeed, the entire contents of a notebook is composed of
+only cells. These cells can take one of two forms: text or code. We
+will descibe the authoring of a notebook in the following section;
+however, here we identify some of the subtle, yet important components
+of a code cell.</p>
+<p>Code cells are composed of three areas: the <strong>input</strong> area, the
+<strong>display</strong> area, and the <strong>output</strong> area. The input area is identified by
+the <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[]:</span></code> prompt to the left of the cell. Between the brackets of
+the <code class="docutils literal notranslate"><span class="pre">In</span></code> prompt can be one of three items: a number, an asterisk, or a
+blank. A number indicates that this cell has been executed and the
+value of the number indicates the order of execution. For example,
+normally, after you execute the first cell after opening a notebook,
+its prompt will read <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]:</span></code>.</p>
+<div class="highlight-{block2, notranslate"><div class="highlight"><pre><span></span>&lt;strong&gt;Pro Tip&lt;/strong&gt;
+
+When teaching with notebooks, you often will want to refer to a cell
+my name. You could refer to a cell by its input prompt
+number. However, keep in mind that this number will change if you
+excecute the cell again, or that students may have different numbers
+if they, too, are executing their own copy of the notebook. A better
+way of referring to a cell may be to refer to the text right above the
+cell as that won&#39;t change while you execute cells. For referring to
+lines of code, see the following section on Tips and Tricks.
+</pre></div>
+</div>
+<p>Before executing a cell, the input prompt number area will be
+blank. Therefore, you can tell at a glance that that cell has not been
+executed yet. It may also be the case that if an input prompt does
+have a number in it, then the cell has been run in the past.  However,
+the cell may not have been run during this session, and thus the
+output may be showing old results. We recommend running from the menu:
+<code class="docutils literal notranslate"><span class="pre">Cell</span></code>, <code class="docutils literal notranslate"><span class="pre">All</span> <span class="pre">outputs</span></code>, <code class="docutils literal notranslate"><span class="pre">Clear</span></code> at the beginning of a
+presentation. That initializes all cell inputs to the blank state.</p>
+<p>During the execution of a cell, the input prompt will contain an
+asterisk. If it seems that too much time has passed and you still see
+<code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[*]:</span></code> your code may be in an infinite loop, or you have lost
+communication with the kernel. You may have to interrupt or restart
+the kernel. This is discussed below.</p>
+<p>Finally, it is important to keep separate the display and output areas
+below the input cell. The difference between these two areas is subtle
+and confusing, but is very important in some instances. The display
+area is reserved for any item that code has produced for viewing. That
+includes simple text (i.e., <code class="docutils literal notranslate"><span class="pre">print(&quot;hello,</span> <span class="pre">world&quot;)</span></code>) or figures from a
+plot. The output area is reserved for items that the cell “returns.”
+This is why in many notebooks you may see a variable assignment
+followed immediately by the variable, like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2434</span> <span class="o">+</span> <span class="mi">33476</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+<p>In this example, you wouldn’t actually see the value computed unless
+you print it to the display area, or return the value. Here, we return
+it as the last value of the cell.</p>
+<div class="highlight-{block2, notranslate"><div class="highlight"><pre><span></span>Keep in mind that the bottom portion of the notebook on the screen or
+monitor may not be visible to students in the back of the room. Make
+sure that the font size is large enough, and that you don&#39;t go too fast
+when demonstrating code that students don&#39;t have access to. We also
+recommend that you hide the Jupyter toolbar and header to get more
+room for the actual notebook (select `Toggle Header` and `Toggle View`
+under the Jupyter `View` menu).
+</pre></div>
+</div>
+</section>
+<section id="authoring-jupyter-notebooks">
+<h2>Authoring Jupyter notebooks<a class="headerlink" href="#authoring-jupyter-notebooks" title="Permalink to this headline">¶</a></h2>
+<p>Before embarking on writing notebooks for your course, we recommend
+that you look around on the internet for related courses.
+A similar course for which an instructor has already generated
+notebooks could exist for you to use or adapt for your course.
+Notebook authors often are happy to collaborate on open source
+educational resources or have their resources be used by other
+instructors. The following sections focus on Python
+simply because it is currently the language with the largest Jupyter
+feature support.</p>
+<section id="accessing-documentation-in-the-notebook-accessing-documentation-in-the-notebook">
+<h3>Accessing documentation in the notebook  {#accessing-documentation-in-the-notebook}<a class="headerlink" href="#accessing-documentation-in-the-notebook-accessing-documentation-in-the-notebook" title="Permalink to this headline">¶</a></h3>
+<p>One of the best features of quality libraries is their documentation,
+which students and other users will likely consult regularly. From a
+notebook cell, the TAB key autocompletes (or gives completion tips)
+and SHIFT-TAB brings up full documentation. Similarly, using a
+question-mark after a method or function will bring up the
+documentation after the cell is run, as shown in Figure 5.1.</p>
+<p><img alt="A question mark used after a method or function brings up the documentation after executing the cell." src="../_images/chapter50.png" /></p>
+<p>Using this feature in class during live coding or
+while explaining how code works helps make students comfortable
+of working effectively with libraries.</p>
+</section>
+<section id="widgets-widgets">
+<h3>Widgets {#widgets}<a class="headerlink" href="#widgets-widgets" title="Permalink to this headline">¶</a></h3>
+<p>Widgets provide the opportunity for learners and instructors to
+interact with code outputs, such as charts and tables.
+Widgets are “mini”
+Graphical User Interfaces (GUI) that give the notebook user access to
+slide bars, toggle buttons, and text-boxes. They can be used in
+conjunction with code, allowing a change of mindset from programming
+as a primary goal to exploring a model or computation as the primary
+goal. Alternatively, the code can be hidden and the widgets used to
+create a notebook “app” that might connect input parameters with a
+simulation and a plot.</p>
+<p>Currently, only a small subset of kernels have widget
+functionality. The reference implementation of widgets
+are the Jupyter-Python widgets
+(<a class="reference external" href="https://ipywidgets.rtfd.io">https://ipywidgets.rtfd.io</a>). It
+includes widget components to generate and display sliders, progress
+bars, text boxes, check boxes, toggle buttons, etc. Many popular
+visualization tools, such as Matplotlib, Plotly, leaflet.js, three.js,
+have Jupyter-Python widget implementations. The documentation contains
+an up-to-date list of all of the widgets and their
+variations. The <code class="docutils literal notranslate"><span class="pre">interact</span></code> method allows you to
+wrap a function, which might be a simple computation or a complex
+simulation that produces a plot, and provides widgets for each of the
+inputs to the function. Figure 5.2 shows a simple example of a sinusoid
+plot whose frequency is controlled by a slide-bar. Another kernel that
+has some widget functionality is C++
+(<a class="reference external" href="https://github.com/QUantStack/xwidgets">https://github.com/QUantStack/xwidgets</a>).</p>
+<p><img alt="Here, a slider allows the user to interactively change the variable k in our function as we plot it." src="../_images/notebook-matplotlib-interact.png" /></p>
+<p>In addition to the IPywidgets library, the ipyleaflet library
+(https://ipyleaflet.rtfd.io) displays an interactive map in a notebook.</p>
+<section id="example">
+<h4>Example {-}<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">ipyleaflet</span> <span class="kn">import</span> <span class="n">Map</span>
+<span class="n">Map</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">[</span><span class="mf">34.6252978589571</span><span class="p">,</span> <span class="o">-</span><span class="mf">77.34580993652344</span><span class="p">],</span> <span class="n">zoom</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="Interactive map widget with ." src="../_images/chapter52.png" /></p>
+<p>For the ambitions reader, there are resources available for you to
+write your your own custom widgets. The widget cookie cutter project
+(<a class="reference external" href="https://ipywidgets.rtfd.io">https://ipywidgets.rtfd.io</a>) is a good
+place to start.</p>
+</section>
+</section>
+<section id="magics-magics">
+<h3>Magics {#magics}<a class="headerlink" href="#magics-magics" title="Permalink to this headline">¶</a></h3>
+<p>Magics are meta-commands that only function within Jupyter and allow a
+user to access language/kernel-specific features. For instance, the
+IPython kernel provides a number of magics that can be useful while
+developing Jupyter notebooks using Python as the primary
+language. These are
+<a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html">documented</a>
+and we will only call out a few of these here. Many other magics are
+available for different kernels but they are specific to Jupyter so
+may not be usable in a stand-alone script in that language outside of
+Jupyter.  In some instances, you may want to use magics sparingly to
+avoid obfuscating these meta-commands with the actual commands in the
+language you are teaching. Magics always begin with either a single
+<code class="docutils literal notranslate"><span class="pre">%</span></code> for single-line commands or with <code class="docutils literal notranslate"><span class="pre">%%</span></code> for applying a command to an
+entire cell. Some magics can be used with single or double <code class="docutils literal notranslate"><span class="pre">%</span></code>, but
+some cannot.</p>
+<section id="examples">
+<h4>Examples {-}<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Matplotlib is a common choice for visualization. In Jupyter, the
+magic <code class="docutils literal notranslate"><span class="pre">%matplotlib</span></code> allows the resulting figures to
+be displayed in the notebook: <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> produces
+static images embedded in the notebook, and <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">notebook</span></code> produces interactive images (with zooming, panning, etc.).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">%run</span></code> magic allows running external scripts (and other
+notebooks), captures output and displays it in the notebook,
+e.g., <code class="docutils literal notranslate"><span class="pre">%run</span> <span class="pre">my_script.py</span></code>. The <code class="docutils literal notranslate"><span class="pre">%run</span></code> magic is one answer to “how
+do I import one notebook into another?”</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">%time</span></code> magic times the execution of the Python expression following it, e.g., <code class="docutils literal notranslate"><span class="pre">%time</span> <span class="pre">sum(range(1000))</span></code>.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">%timeit</span></code> magic is similar to <code class="docutils literal notranslate"><span class="pre">%time</span></code>, but it
+runs the expression multiple times and reports the average
+execution time.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">%reset</span></code> magic deletes all user-defined variables along with input and
+output.  Magics often have “flags,” following the Unix command
+pattern. For example, <code class="docutils literal notranslate"><span class="pre">%reset</span> <span class="pre">-s</span></code> is a soft reset and only removes
+user-defined variables. These commands can be useful to avoid problems
+with out-of-order execution problems.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">%debug</span></code> magic is used after code has stopped due to an
+exception (i.e., “the program has crashed”). Enter the <code class="docutils literal notranslate"><span class="pre">%debug</span></code>
+magic immediately after the crash, and you will be placed into the
+environment that caused the problem. From there you can explore
+variables and find the cause of the problem.</p></li>
+</ul>
+<p>A good example of a magic operating on the entire contents of cell is
+the <code class="docutils literal notranslate"><span class="pre">%%HTML</span></code> magic, forcing the cell to be interpreted as HTML
+and rendered appropriately. You can also use magics to call other
+languages while running the IPython kernel.  For example, you can run
+R code from within an IPython notebook by using the <code class="docutils literal notranslate"><span class="pre">%%R</span></code> magic.</p>
+<div class="highlight-{block2, notranslate"><div class="highlight"><pre><span></span>&lt;strong&gt;Pro Tip&lt;/strong&gt;
+
+In the IPython kernel you can also use the `%shell` magic. This is
+often abbreviated as `!` and can run and return results from the
+shell/terminal. In IPython, you can also mix magics with regular
+Python code. For example, `files = ! ls` will use the `ls` (list
+files) command in the terminal, return the list, and set the
+Python variable `files` to that list.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="notebooks-under-version-control-notebooks-under-version-control">
+<h3>Notebooks under version control {#notebooks-under-version-control}<a class="headerlink" href="#notebooks-under-version-control-notebooks-under-version-control" title="Permalink to this headline">¶</a></h3>
+<p>Keeping notebooks under version control is a great way to not only
+keep track of changes to your content, but also for
+sharing it. In a course where multiple people are contributing
+to the development of notebooks for the course, using version control
+in conjunction with a platform like GitHub, allows authorship to be
+tracked and provides communication tools for reviewing new
+contributions or outlining requested development for a new assignment,
+activity, etc.  Another advantage of using version control is that
+some services will provide rendered views of notebooks
+that you have made public. GitHub shows a rendered
+version of the notebook, rather than the ASCII text that a notebook is
+comprised of.  Some pitfalls with LaTeX rendering may occur,
+as platforms do not always render the notebooks the same as they would
+appear in an active Jupyter interface.</p>
+<p>We should mention a few caveats to keeping notebooks under version control.
+The code output, including images, is stored
+in the repository, unless you clear the output
+before committing changes.  This can make reviewing changes difficult,
+as changes in output will be detected even when nothing has actually
+changed content-wise.  The tracked notebooks also can become large if
+output is tracked.  Even when clearing the output, reviewing
+changes can be awkward due to the format of the notebook (notebooks
+are plain-text files and the file format is represented as
+<a class="reference external" href="https://www.json.org/">JSON</a>).
+The community is actively developing tools to make it easier to use version control with Jupyter notebooks; one such tool is <code class="docutils literal notranslate"><span class="pre">nbdime</span></code> (see box).</p>
+<div class="highlight-{block2, notranslate"><div class="highlight"><pre><span></span>&lt;strong&gt;nbdime&lt;/strong&gt; &lt;a href=&quot;https://nbdime.readthedocs.io/&quot;&gt;nbdime.readthedocs.io/&lt;/a&gt;
+
+nbdime includes a set of tools for reviewing the changes (&quot;diffs&quot;) and
+merging changes in Jupyter notebooks. You can compare versions of a
+notebook using the terminal, view the changes richly rendered on a
+browser, and merge in various ways. Because nbdime understands the
+structure of notebook documents, it can make smart &quot;diffing and
+merging&quot; decisions.
+</pre></div>
+</div>
+<p>Another option to improve your version-control experience is to export
+a Jupyter notebook to a markdown document, for example using the <a class="reference external" href="https://github.com/mwouts/jupytext">jupytext</a> tool.
+Then you can review diffs in the usual way for plain-text files.</p>
+</section>
+<section id="testing-notebooks-testing-notebooks">
+<h3>Testing notebooks {#testing-notebooks}<a class="headerlink" href="#testing-notebooks-testing-notebooks" title="Permalink to this headline">¶</a></h3>
+<p>Before distributing notebooks, and in particular if you are working
+with multiple contributors to the course material, testing the
+notebooks before they are distributed to students or used in a live
+demo can help mitigate unexpected bugs. At a minimum, you can test
+that the notebook executes cleanly from top to bottom by restarting
+the kernel and running all cells from top to bottom. This can be done
+from the menu (Restart + Run all).</p>
+<p>Though it requires a bit more setup, tests can be run automatically
+using a continuous integration service, such as TravisCI
+(<a class="reference external" href="https://travis-ci.org">https://travis-ci.org</a>). This will require
+executing the entire notebook via the command line, for example
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">nbconvert</span> <span class="pre">--ExecutePreprocessor.enabled=True</span> <span class="pre">--to=html</span> <span class="pre">my_notebook.ipynb</span></code> will execute the notebook (same as pressing
+“Restart + Run All”) and then convert it to HTML. These services can
+be connected to GitHub so that any time that the notebooks are
+changed, the tests are run automatically. Simplifying this process is
+an area that is under development in the open source community. The
+package
+<a class="reference external" href="https://github.com/opengeophysics/testipynb">https://github.com/opengeophysics/testipynb</a>
+provides an easy way to test notebooks.</p>
+</section>
+<section id="essential-python-libraries-essential-python-libraries">
+<h3>Essential Python libraries  {#essential-python-libraries}<a class="headerlink" href="#essential-python-libraries-essential-python-libraries" title="Permalink to this headline">¶</a></h3>
+<p>The purpose of this section is to introduce some of the most widely
+used packages within the Python ecosystem. As mentioned before, over 100 kernels enable different programming languages in Jupyter.
+But Python is a common choice in many disciplines, due to its
+large open-source community which develops and maintains an ecosystem of over 150,000 software packages.</p>
+<p>The core Python library
+(<a class="reference external" href="https://docs.python.org/3/">https://docs.python.org</a>) contains basic data
+types such as lists and dictionaries, as well as core functionality
+such as arithmetic operators and simple file parsers. Most tasks can
+be achieved with core Python. They are often made easier, however, with
+higher-level libraries. This particularly applies for
+scientific computing with Python.
+Among the vast number of packages in the Python ecosystem, NumPy,
+Scipy, Matplotlib and Pandas are among the most commonly used.
+A good resource for getting familiar with these libraries
+is the <strong>Scipy Lecture Notes</strong> <a class="reference external" href="https://scipy-lectures.org/">https://scipy-lectures.org/</a>.</p>
+<ul class="simple">
+<li><p>Numpy
+(<a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a>) is a fundamental
+library for numerical and scientific computing with Python. It
+contains data structures for numerical arrays, tools for linear
+algebra, random number capabilities, and much more.</p></li>
+<li><p>SciPy
+(<a class="reference external" href="https://docs.scipy.rg/">https://docs.scipy.org/</a>) offers a
+varied set of functions for scientific computing, such
+as optimization, interpolation, statistics and signal processing. It
+also includes fundamental constants from many disciplines such as the
+speed of light as well as data structures for sparse
+matrices.</p></li>
+<li><p>Matplotlib
+(<a class="reference external" href="https://matplotlib.org/">https://matplotlib.org/</a>) is the core
+plotting library for Python and can be used inline in the notebook
+with the <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">notebook</span></code> or <code class="docutils literal notranslate"><span class="pre">%matplotlib</span> <span class="pre">inline</span></code> cell
+magics.</p></li>
+<li><p>Pandas
+(<a class="reference external" href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>) provides
+resources for data analysis and a flexible data structures for labeled tabular data.</p></li>
+</ul>
+</section>
+<section id="advanced-topic-extensions-advanced-topic-extensions">
+<h3>Advanced topic: extensions {#advanced-topic-extensions}<a class="headerlink" href="#advanced-topic-extensions-advanced-topic-extensions" title="Permalink to this headline">¶</a></h3>
+<p>There are many community contributed extensions that add functionality
+to Jupyter notebooks.  Extensions vary from displaying an automated
+table of contents for a notebook, or prettify code, or hiding/showing
+solution cells.  Here is the link for how to install and enable
+extensions:
+<a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html">https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html</a></p>
+<p>Here is a list of a collection of extensions that are bundled
+together:
+<a class="reference external" href="https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html">https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/nbextensions.html</a></p>
+<p>Creating custom extensions is a way to extend or customize Jupyter to
+add a capability that is not currently available with current
+extensions or out of the box. These extensions may be targeted for a
+specific kernel.  Here are instructions for how to create and install
+custom extensions:
+<a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/extending/frontend_extensions.html">https://jupyter-notebook.readthedocs.io/en/stable/extending/frontend_extensions.html</a></p>
+<p>Figure X shows shows how Google Collaboratory, one of many tools to
+interact with Jupyter notebooks, leverages the power of Jupyter
+extensions for custom interaction and presentation.</p>
+<p><img alt="Google Collaboratory uses Jupyter extensions to customize Jupyter for their users. The run/play icon to the left of the code cell is created using extensions. This is not present in the standard Jupyter software. TensorFlow is a library for creating Machine Learning experiments in Python." src="../_images/chapter53.png" /></p>
+<p>The set of extensions for Jupyter is constantly evolving. Educators
+are exploring new and interesting methods of using notebooks in
+pedagogy. While the list of current extensions is far too long to
+list, you can interactively experience some of the most useful
+extensions through this live
+<a class="reference external" href="https://hub.mybinder.org/user/psychemedia-showntell-eii7j2nh/notebooks/index_computing.ipynb">Binder notebook</a>
+(Binder is described in detail in the following chapter).
+This live notebook demonstrates the following:</p>
+<ul class="simple">
+<li><p>Turning on line numbers in code cells (makes it easier to refer to a line of code)</p></li>
+<li><p>Code folding extension (hide code blocks to help focus attention)</p></li>
+<li><p>Locked and frozen cells extension (prevent changes to cells)</p></li>
+<li><p>An extension for a better user interface for error messages</p></li>
+<li><p>A “turtle” extension (draws in a canvas in the notebook)</p></li>
+<li><p>Block-based programming extension</p></li>
+</ul>
+<p>The block-based programming extension (called Jigsaw) allows users to
+program using drag-and-drop blocks of code that can be integrated with
+other cells in a Jupyter Notebook (see figure). The advantages (and
+disadvantages) of blocked-based languages are active research topics
+in computer education research (see, for example, Mark Guzdial’s
+excellent <a class="reference external" href="https://computinged.wordpress.com/">Computing Education Research Blog</a>,
+specifically <a class="reference external" href="https://computinged.wordpress.com/tag/blocks-based-language/">those posts on block-based languages</a>).</p>
+<p><img alt="Example of incorporating Jigsaw, a block-based extension, in a Jupyter Notebook. The extension allows the user to assemble code blocks that can then be translated into Python or Java, and executed." src="../_images/jigsaw.png" /></p>
+</section>
+</section>
+<section id="tips-and-tricks">
+<h2>Tips and tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h2>
+<section id="reminders">
+<h3>Reminders<a class="headerlink" href="#reminders" title="Permalink to this headline">¶</a></h3>
+<p>If you are using a single notebook as a standalone exercise in a
+traditional class (i.e., this is the only computational component of
+your class), then it is helpful to have a few cells at the top of that
+notebook that reviews how to navigate through the notebook and how to
+insert cells, etc.</p>
+</section>
+<section id="feedback">
+<h3>Feedback<a class="headerlink" href="#feedback" title="Permalink to this headline">¶</a></h3>
+<p>How do we get feedback from students in an interactive session to see
+if students have completed an exercise?</p>
+<p>A low tech solution is to give students sticky notes of different
+colors, one meaning “finished” and one meaning “need help”, that they
+can stick on the back of their computers. The instructor can then
+quickly look up to take a survey of the state of the class and decide
+how to proceed.</p>
+<p>Projecting Slack or a similar chat group on a screen and having
+student copy-paste solutions (provided they are short functions) is a
+nice way to let everyone in the class see one another’s solutions.  A
+positive aspect of having multiple student solutions projected is that
+it can show the variety of ways to solve a problem. This gives an
+opportunity to talk about the readability of solutions and their
+efficiency. A downside is that in a large class, the sheer volume of
+posts can make it overwhelming. Instead polling can be used to
+aggregate student answers and provide some form of feedback to the
+instructor. Nbgrader or travis-CI can also be options here, requiring
+students to submit completed code where it is assessed
+automatically. These will however require more setup and can take some
+time to complete.</p>
+</section>
+<section id="explaining-each-cell">
+<h3>Explaining each cell<a class="headerlink" href="#explaining-each-cell" title="Permalink to this headline">¶</a></h3>
+<p>Consider moving the comments for a code block into a markdown cell
+either directly above or below the code cell. Comments in a markdown
+cell often read much better and give you more flexibility in
+discussing or describing the code. However, short comments in a block
+of code can still be useful.</p>
+</section>
+<section id="how-to-structure-code-cells">
+<h3>How to structure code cells<a class="headerlink" href="#how-to-structure-code-cells" title="Permalink to this headline">¶</a></h3>
+<p>How much code should you put in a cell? You will develop your own
+style of writing noteooks with experience. Typically, you will want to
+keep the number of lines low so that it is easy to follow, and you can
+have useful comments above the cell. However, we recommend putting
+code that “goes together as a meaningful unit” into a single cell. For
+example, if you have lines of code that are highly dependent on each
+other, then you might want to put them together. As an example,
+consider two lines of code: one that opens a file, and the second that
+reads the data from the file. It is probably a good idea to put those
+into the same cell so that they are always executed
+together. Otherwise, the student may encounter errors if they execute
+cells independently a second time (e.g., there are no more data).</p>
+<p>Specifically, messing up the dependencies between cells is where most
+of the confusion using notebooks comes from with new users. For
+example, if you change a variable’s name (without restarting the
+notebook), then the following code cells may continue to use the old
+variable’s name (and value). Later, when running the notebook again,
+the notebook may fail in unexpected ways because the old variable no
+longer exists. This is sometimes referred to as “the hidden state
+problem.” This is an open research problem, and researchers are
+exploring various possible solutions. For example, trying searching
+the internet for “jupyter dependency graph” or “jupyter dataflow
+notebook.”</p>
+<div class="highlight-{block2, notranslate"><div class="highlight"><pre><span></span>&lt;strong&gt;Pro Tip&lt;/strong&gt;
+
+You can easily split a cell into two parts at the cursor using the
+keystroke `CONTROL` + `SHIFT` + `-`. You can also merge multiple cells
+with `SHIFT` + `m`. Both of these are also available from the menu
+under `Edit`.
+</pre></div>
+</div>
+<p>On the other hand, it is often a useful idea to separate lines of code
+where you want to provide the student a place to interactively add
+cells, and examine the state at that particular point in the
+process. Asking probing questions in a Socratic method is a very
+useful technique for engaging the reader and encouraging them to
+become more than a reader. Students do not naturally know to insert
+cells and explore items in a notebook. You will need to explicitly
+teach this skill. In fact, teaching students how to effectively weave
+code into their <em>own</em> notebook stories is an important component of
+teaching with notebooks.</p>
+</section>
+<section id="custom-styling">
+<h3>Custom styling<a class="headerlink" href="#custom-styling" title="Permalink to this headline">¶</a></h3>
+<p>New notebook creators often try to centrally manage the formatting of
+headings, equations, and other textual items. For example, rather than
+using a standard markdown heading, a creator may over-design the
+headings by using HTML styles. This may create two problems:</p>
+<ol class="simple">
+<li><p>The rendering of the notebook markdown may change and your
+formatted HTML header may not maintain the same look over time.</p></li>
+<li><p>Headers created using markdown can be used by notebook tools,
+such as automatically creating a Table of Contents.</p></li>
+</ol>
+<p>Our recommendation is to resist the desire to customize the styling
+and simply use the default representations.  If you want to do
+customization (for example if you want to color certain cells) you can
+use CSS.</p>
+</section>
+<section id="length-of-notebooks">
+<h3>Length of notebooks<a class="headerlink" href="#length-of-notebooks" title="Permalink to this headline">¶</a></h3>
+<p>Notebook authors sometimes make the notebooks very long with many
+topics and sections. Notebook sections and cells are currently not
+easily reused in a copy/paste sense for mixing intra-notebook
+content. Until this functionality is available, we recommend that
+authors make short, self-contained notebooks around short topics. This
+allows other notebooks authors to mix and match notebooks to create
+curriculum.</p>
+</section>
+</section>
+<section id="gotchas">
+<h2>Gotchas<a class="headerlink" href="#gotchas" title="Permalink to this headline">¶</a></h2>
+<section id="programming-language-neq-jupyter">
+<h3>Programming language <span class="math notranslate nohighlight">\(\neq\)</span> Jupyter<a class="headerlink" href="#programming-language-neq-jupyter" title="Permalink to this headline">¶</a></h3>
+<p>Teaching a class entirely with Jupyter can give the sense to students
+that this is the way all computational exploration is done. In
+particular, students can be confused into thinking that programming
+requires the notebook, instead of understanding that a notebook is
+just one way to interact with a particular language. This point should
+be made clear periodically. A good way to reinforce this is to show
+how to take a function that has been developed and debugged in a
+notebook and cut-paste it into a script (such as a file ending in .py
+for Python) and then import it into the notebook to regain that
+functionality. Also, the Integrated Development Environment (IDE),
+Spyder, has a plugin
+(<a class="reference external" href="https://github.com/spyder-ide/spyder-notebook">https://github.com/spyder-ide/spyder-notebook</a>)
+that allows notebooks to be displayed alongside Python scripts and a
+python terminal which can be useful for showing this dichotomy.</p>
+<p><img alt="Jupyter notebook displayed in a window pane inside Spyder." src="../_images/chapter54.png" /></p>
+</section>
+<section id="restart-restart-restart">
+<h3>Restart, restart, restart…<a class="headerlink" href="#restart-restart-restart" title="Permalink to this headline">¶</a></h3>
+<p>Often, students may need to stop a computation, and this can be
+accomplished by pressing the “Interrupt” button in the
+toolbar. However, students should also be made aware of how to restart
+the kernel in a notebook, and what this means. There are several
+instances when students might need to do this. Sometimes students
+write code that can go into an infinite loop. The visual cues that
+notebooks give in this case are subtle, and students may not realize
+this and don’t understand why the notebook is non-responsive. In
+live-coding situations, it can be useful to demonstrate this to
+students and show them how to restart the kernel and carry on.</p>
+<p>A second instance of where restarting a kernel might be needed is due
+to how the notebook stores the state of the computation. We like to
+think that, since the notebook is laid out in a linear fashion, that
+the state will always reflect what would happen if the notebook was
+run from the start up to that point. However, it is common to work in
+a notebook out of order, for instance if students ask a question about
+some previous example. If the variable has been changed in subsequent
+cells, then its value might not reflect what you expect when you rerun
+a cell earlier in the notebook. Restarting the kernel is sometimes the
+only solution.</p>
+</section>
+<section id="notebook-hygiene-notebook-hygiene">
+<h3>Notebook hygiene {#notebook-hygiene}<a class="headerlink" href="#notebook-hygiene-notebook-hygiene" title="Permalink to this headline">¶</a></h3>
+<p>Many gotchas can be mitigated by developing notebooks that will be
+robust to incremental and non-linear execution. The main principle is
+to minimize side-effects of executing a cell and manifests itself
+somewhat differently in different languages; our suggestions here will
+be relevant to Python and may need to be adapted for other
+languages. Notebooks should generally be able to execute sequentially,
+such as via “restart kernel and run all cells”. (An exception is when
+a notebook is intentionally incomplete for the purpose of live coding
+or student exercises, see nbgrader or the exercise estnations for more
+elegant ways to handle this.) Variable mutation is the most common way
+in which a notebook may malfunction when executing cells in a
+non-linear way (e.g., in response to student questions or when
+comparing and contrasting different methodologies). Sometimes this
+mutation is incidental, through dummy variables that were not meant to
+have significance outside the scope of the cell in which they are
+used. Their scope can be limited by placing them in a function, even
+if that function is only called once. Redefinition of functions can
+often be avoided by parameterizing the desired functionality as would
+typically be done if designing a library (though this may be a
+distracting software design for novice programmers). Function
+definitions should have little or no dependency on variables from
+their enclosing scope. When modifying cells for demos and formative
+assessments during class, it is useful to either copy the cell or
+modify/execute such that a conforming implementation remains present
+when moving on to other cells where it may be used. Additionally, you
+can minimize these issues by grouping code in a single cell that
+should always be executed sequentially, because code within a cell
+will always be sequential.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "Jero2760/Clases_online_con_Jupyter",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="04-a-catalogue-of-pedagogical-patterns.html" title="previous page">A catalogue of pedagogical patterns {#catalogue}</a>
+    <a class='right-next' id="next-link" href="06-getting-your-class-going-with-jupyter.html" title="next page">Getting your class going with Jupyter {#getting-going}</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Publiconsulting Media<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-52617120-7', 'auto');
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    
+  </body>
+</html>
