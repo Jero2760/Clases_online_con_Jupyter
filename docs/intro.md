@@ -1,15 +1,15 @@
-# Clases online con las herramientas desarrolladas por el Proyecto Jupyter
+# Clases online con Jupyter
 
 <!---[![Build Status](https://travis-ci.com/jupyter4edu/jupyter-edu-book.svg?branch=master)](https://travis-ci.com/jupyter4edu/jupyter-edu-book)-->
 
-An open book about Jupyter and its use in teaching and learning.
+Un libro abierto sobre el Proyecto Jupyter y su aplicación a la educación online.
 
-Based on the repository for the book "Teaching and Learning with Jupyter." [https://jupyter4edu.github.io/jupyter-edu-book/](https://jupyter4edu.github.io/jupyter-edu-book/)
+Basado en el repositorio del libro "Teaching and Learning with Jupyter." [https://jupyter4edu.github.io/jupyter-edu-book/](https://jupyter4edu.github.io/jupyter-edu-book/)
 
-To view the book as HTML, and download it as PDF and other formats, please visit:
+Para ver este libro en HTML o descargarlo en PDF y otros formatos, acceder a este enlace:
 [https://jero2760.github.io/Clases_online_con_Jupyter/docs/intro.html](https://jero2760.github.io/Clases_online_con_Jupyter/docs/intro.html)
 
-If you would like to contribute to this book, please see the file [CONTRIBUTING.md](CONTRIBUTING.md).
+Si quieres contribuir a este libro, por favor lee el siguiente documento (If you would like to contribute to this book, please see the file) [CONTRIBUTING.md](CONTRIBUTING.md).
 
 
 ## Code of Conduct
