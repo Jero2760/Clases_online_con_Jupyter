@@ -1,4 +1,4 @@
-# Clases_online_con_Jupyter
+# Clases online con Jupyter
 Educación online utilizando los desarrollos del Proyecto Jupyter
 
 Un libro abierto sobre el Proyecto Jupyter y su aplicación a la educación online.
