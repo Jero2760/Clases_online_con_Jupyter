@@ -1,6 +1,6 @@
-# Teaching and Learning with Jupyter
+# Clases online con las herramientas desarrolladas por el Proyecto Jupyter
 
-//[![Build Status](https://travis-ci.com/jupyter4edu/jupyter-edu-book.svg?branch=master)](https://travis-ci.com/jupyter4edu/jupyter-edu-book)
+<!---[![Build Status](https://travis-ci.com/jupyter4edu/jupyter-edu-book.svg?branch=master)](https://travis-ci.com/jupyter4edu/jupyter-edu-book)-->
 
 An open book about Jupyter and its use in teaching and learning.
 
