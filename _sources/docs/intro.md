@@ -2,7 +2,7 @@
 
 <!---[![Build Status](https://travis-ci.com/jupyter4edu/jupyter-edu-book.svg?branch=master)](https://travis-ci.com/jupyter4edu/jupyter-edu-book)-->
 
-Un libro abierto sobre el Proyecto Jupyter y su aplicación a la educación online.
+Un libro abierto sobre el Proyecto Jupyter y su aplicación a la educación online, creado con Jupyterbook [https://jupyterbook.org/intro.html](https://jupyterbook.org/intro.html)
 
 Basado en el repositorio del libro "Teaching and Learning with Jupyter." [https://jupyter4edu.github.io/jupyter-edu-book/](https://jupyter4edu.github.io/jupyter-edu-book/)
 
