@@ -22,6 +22,7 @@
 - file: docs/index
 - file: docs/02-why-jupyter
 - file: docs/03-notebooks-in-teaching-and-learning
+- file: nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.ipynb
 - file: docs/04-a-catalogue-of-pedagogical-patterns
 - file: docs/05-jupyter-ecosystem
 - file: docs/06-getting-your-class-going-with-jupyter
