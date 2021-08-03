@@ -56,16 +56,18 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://publiconsulting.com/nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.html" />
+    <link rel="canonical" href="https://publiconsulting.com/nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="A catalogue of pedagogical patterns {#catalogue}" href="../docs/04-a-catalogue-of-pedagogical-patterns.html" />
+    <link rel="prev" title="Notebooks in teaching and learning" href="../docs/03-notebooks-in-teaching-and-learning.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
 
 
 <!-- Opengraph tags -->
-<meta property="og:url"         content="https://publiconsulting.com/nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.html" />
+<meta property="og:url"         content="https://publiconsulting.com/nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Introducción al procesamiento de textos con Python" />
 <meta property="og:description" content="Introducción al procesamiento de textos con Python    &lt;div align=&#34;center&#34;&gt; &lt;img src=&#34; data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB1YAAAFiCAIAAADKk60sAAAACXBI" />
@@ -97,7 +99,12 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../docs/intro.html">
+   Clases online con Jupyter
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/landing-page.html">
    Teaching and Learning with Jupyter
@@ -116,6 +123,36 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../docs/03-notebooks-in-teaching-and-learning.html">
    Notebooks in teaching and learning
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introducción al procesamiento de textos con Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#instalacion-previa">
+   0.Instalación previa
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#que-es-python">
+   1.¿Qué es Python?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#que-es-un-notebook-jupyter">
+   2.¿Qué es un notebook Jupyter?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#a-programar-los-conceptos-basicos-de-python">
+   3.¡A programar! Los conceptos básicos de Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="#nuestros-primeros-pasos-en-el-procesamiento-de-textos">
+   4.Nuestros primeros pasos en el procesamiento de textos
   </a>
  </li>
  <li class="toctree-l1">
@@ -203,7 +240,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -223,10 +260,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/Jero2760/Clases_online_con_Jupyter/issues/new?title=Issue%20on%20page%20%2Fnb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/Jero2760/Clases_online_con_Jupyter/issues/new?title=Issue%20on%20page%20%2Fnb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/Jero2760/Clases_online_con_Jupyter/edit/master/docs/nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.ipynb"><button
+        <a class="edit-button" href="https://github.com/Jero2760/Clases_online_con_Jupyter/edit/master/docs/nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -246,7 +283,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Jero2760/Clases_online_con_Jupyter/master?urlpath=tree/docs/nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Jero2760/Clases_online_con_Jupyter/master?urlpath=tree/docs/nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -254,7 +291,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/Jero2760/Clases_online_con_Jupyter/blob/master/docs/nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/Jero2760/Clases_online_con_Jupyter/blob/master/docs/nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -2125,6 +2162,8 @@ Esta cosa de <code class="docutils literal notranslate"><span class="pre">TextIO
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="../docs/03-notebooks-in-teaching-and-learning.html" title="previous page">Notebooks in teaching and learning</a>
+    <a class='right-next' id="next-link" href="../docs/04-a-catalogue-of-pedagogical-patterns.html" title="next page">A catalogue of pedagogical patterns {#catalogue}</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

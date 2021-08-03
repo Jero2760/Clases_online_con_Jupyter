@@ -18,25 +18,20 @@
 #  - file: docs/chapter3/publish
 
 - file: README
-  numbered: true
+  numbered: false
 
-- part: Capítulos
-  chapters:
-    - file: docs/intro
-    - file: docs/landing-page
-    - file: docs/index
-    - file: docs/02-why-jupyter
-    - file: docs/03-notebooks-in-teaching-and-learning
-    - file: docs/04-a-catalogue-of-pedagogical-patterns
-    - file: docs/05-jupyter-ecosystem
-    - file: docs/06-getting-your-class-going-with-jupyter
-    - file: docs/07-usage-case-studies
-    - file: docs/08-about-the-authors
-    - file: docs/09-glossary
-    - file: docs/CODE-OF-CONDUCT
-    - file: docs/CONTRIBUTING
-    - file: docs/contributors
-
-- part: Practice Exercises
-  chapters:
-    - file: nb/Sesión_2_Introducción_al_procesamiento_de_textos_con_Python.ipynb
+- file: docs/intro
+- file: docs/landing-page
+- file: docs/index
+- file: docs/02-why-jupyter
+- file: docs/03-notebooks-in-teaching-and-learning
+- file: nb/Sesion_2_Introduccion_al_procesamiento_de_textos_con_Python.ipynb
+- file: docs/04-a-catalogue-of-pedagogical-patterns
+- file: docs/05-jupyter-ecosystem
+- file: docs/06-getting-your-class-going-with-jupyter
+- file: docs/07-usage-case-studies
+- file: docs/08-about-the-authors
+- file: docs/09-glossary
+- file: docs/CODE-OF-CONDUCT
+- file: docs/CONTRIBUTING
+- file: docs/contributors
