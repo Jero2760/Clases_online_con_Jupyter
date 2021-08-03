@@ -28,8 +28,7 @@ Este libro está dirigido a todas las personas interesadas en crear lecciones on
 
 Por su enfoque generalista, trata de presentar una visión global del Proyecto Jupyter en educación, que ayude tanto a los que ya utilizan Jupyter en la enseñanza como a aquellos que quieren conocer las posibilidades de Jupyter en el desarrollo de contenidos online para sus clases.
 
-[El Proyecto Jupyter](http://jupyter.org/) es un esfuerzo global de colaboración en comunidad para desarrollar herramientas interactivas open-source para desarrollo e investigación informática. Las herramientas incluyen: más de 100 lenguajes de programación (con Python como primer lenguaje), the Jupyter Notebook, JupyterHub, y un
-amplio ecosistema de extensiones puesto a disposición general por una enorme comunidad de desarrolladores. 
+[El Proyecto Jupyter](http://jupyter.org/) es un esfuerzo global de colaboración en comunidad para desarrollar herramientas interactivas open-source para desarrollo e investigación informática. Las herramientas incluyen: más de 100 lenguajes de programación (con Python como primer lenguaje), the Jupyter Notebook, JupyterHub, Jupyter Lab, Jupyter Lite y un amplio ecosistema de extensiones puesto a disposición general por una enorme comunidad de desarrolladores. 
 
 En particular, The Jupyter Notebook es muy popular en el campo de la ciencia de datos desde 2014. Es utilizado como plataforma de desarrollo de materiales educativos para clases online, para compartir ejercicios y tutoriales con alumnos y crear lecciones interactivas. Un notebook es un documento que contiene texto, fórmulas matemáticas, imágenes, videos, código ejecutable (muchos lenguajes de programación son posibles) y el output de ese código, ambos para ser explorados interactivamente por quien accede al notebook. Gracias a la capacidad de combinar contenido y código ejecutable, los notebooks se han convertido en una herramienta muy potente y versátil para educadores y alumnos.
 
