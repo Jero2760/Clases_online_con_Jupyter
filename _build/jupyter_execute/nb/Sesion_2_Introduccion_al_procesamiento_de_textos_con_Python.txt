@@ -1,4 +1,4 @@
-## Introducción al procesamiento de textos con Python 
+# Introducción al procesamiento de textos con Python 
 
 
 ---
@@ -21,7 +21,7 @@ import zipfile; import os; import urllib.request
 urllib.request.urlretrieve("https://github.com/linhd-postdata/summer-school2019/raw/master/data.zip", "data.zip")
 zipfile.ZipFile(os.path.abspath("data.zip")).extractall(".")
 
-# 1.¿Qué es Python?
+## 1.¿Qué es Python?
 
 Python es un lenguaje de programación ampliamente utilizado en muchos campos científicos hoy en día. Es un lenguaje  fácil y accesible para estudiantes e investigadores del campo de las humanidades. 
 
